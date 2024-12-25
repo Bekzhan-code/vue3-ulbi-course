@@ -1,9 +1,9 @@
 <template>
     <form @submit.prevent>
       <h4>Создание поста</h4>
-      <input type="text" placeholder="Название" v-model="title">
-      <input type="text" placeholder="Описание" v-model="descr">
-      <button @click="createPost">Создание</button>
+      <my-input type="text" placeholder="Название" v-model="title" />
+      <my-input type="text" placeholder="Описание" v-model="descr" />
+      <my-button class="submit-btn" @click="createPost">Создание</my-button>
     </form>
 </template>
 
@@ -30,25 +30,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 form {
   display: flex;
   flex-direction: column;
 }
 
-input {
-  width: 100%;
-  border: 1px solid teal;
-  padding: 10px 15px;
-  margin-top: 15px;
-}
-
-button {
+.submit-btn {
   margin-top: 15px;
   align-self: flex-end;
-  padding: 10px 15px;
-  background: none;
-  color: teal;
-  border: 1px solid teal;
 }
 </style>
